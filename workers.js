@@ -7,7 +7,7 @@
  */
 
 // 定义 Github 项目，文章会从这里读取
-const github_base = "kasuganosoras/cloudflare-worker-blog";
+const github_base = "whyouare111/cloudflare-worker-blog";
 
 // 站点名称
 const site_name = "CloudFlare Workers Blog";
@@ -96,7 +96,7 @@ async function bloghandle(request) {
         var filename = encodeURIComponent(json[i].file.replace(/"/g, ""));
         var time = json[i].time;
         var title = json[i].title;
-        data += `<a href="?p=${filename}" class="post-a">
+        data += `<a href="?p=${filename}" class="post-a h-entry">
 						<div class="post-box">
 							<h4>${title}</h4>
 							<p>发表于 ${time}</p>
